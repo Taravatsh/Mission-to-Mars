@@ -82,7 +82,7 @@ hemisphere_image_urls = []
 for i in range(0,4):
     
     # Create an empty dictionary.
-    hemisphere = {}
+    hemispheres = {}
     # Click on the each hemisphere link.
     all_links = browser.find_by_css('a.itemLink h3')[i].click()
     # Navigate to the full resolution image URL by finding the "Sample" image anchor tag.
@@ -92,9 +92,9 @@ for i in range(0,4):
     # Retrieve the title for the hemisphere image.
     image_title = browser.find_by_css('h2.title').text
     # Save the image url string and image title as values for img_url and title keys.
-    hemisphere = {'img_url': full_image_url, 'title': image_title}
+    hemispheres = {'img_url': full_image_url, 'title': image_title}
     # Add the dictionary to the list.
-    hemisphere_image_urls.append(hemisphere)
+    hemisphere_image_urls.append(hemispheres)
     # Navigate back to the beginning to retrieve data of the next image.
     browser.back()
 
