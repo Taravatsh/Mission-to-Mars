@@ -91,8 +91,10 @@ for i in range(0,4):
     full_image_url = full_image_page['href']
     # Retrieve the title for the hemisphere image.
     image_title = browser.find_by_css('h2.title').text
-    # Save the image url string and image title as values for img_url and title keys.
-    hemispheres = {'img_url': full_image_url, 'title': image_title}
+    # Save the image url string as value for img_url in hemispheres dictionary.
+    hemispheres["img_url"] = full_image_url
+    # Save the image title as value for title keys in hemispheres dictionary.
+    hemispheres["title"] = image_title
     # Add the dictionary to the list.
     hemisphere_image_urls.append(hemispheres)
     # Navigate back to the beginning to retrieve data of the next image.
