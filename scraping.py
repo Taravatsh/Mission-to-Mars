@@ -26,6 +26,8 @@ def scrape_all():
     browser.quit()
     return data
 
+### Mars News
+
 def mars_news(browser):
 
     # Scrape Mars News
@@ -53,7 +55,7 @@ def mars_news(browser):
 
     return news_title, news_p
 
-# ## JPL Space Images Featured Image
+### JPL Space Images Featured Image
 
 def featured_image(browser):
     # Visit URL
@@ -81,7 +83,7 @@ def featured_image(browser):
     
     return img_url
 
-# ## Mars Facts
+### Mars Facts
 
 def mars_facts():
     # Add try/except for error handling
@@ -100,6 +102,7 @@ def mars_facts():
     return df.to_html(classes="table table-striped")
 
 ### Hemisphere Data
+
 def hemisphere_data(browser):
 
     # Visit URL
@@ -112,7 +115,7 @@ def hemisphere_data(browser):
     # Create a for loop to iterate through the CSS elements for all the four images and titles.
     for i in range(0, 4):
         # Create an empty dictionary.
-        hemisphere = {}
+        hemispheres = {}
         # Click on the each hemisphere link.
         all_links = browser.find_by_css('a.itemLink h3')[i].click()
         # Navigate to the full resolution image URL by finding the "Sample" image anchor tag.
@@ -122,9 +125,9 @@ def hemisphere_data(browser):
         # Retrieve the title for the hemisphere image.
         image_title = browser.find_by_css('h2.title').text
         # Save the image url string and image title as values for img_url and title keys.
-        hemisphere = {'img_url': full_image_url, 'title': image_title}
+        hemispheres = {'img_url': full_image_url, 'title': image_title}
         # Add the dictionary to the list.
-        hemisphere_image_urls.append(hemisphere)
+        hemisphere_image_urls.append(hemispheres)
         # Navigate back to the beginning to retrieve data of the next image.
         browser.back()
 
