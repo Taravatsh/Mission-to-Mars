@@ -36,12 +36,11 @@ Bootstrap which is a **CSS** framework is used for developing responsive and mob
 
 As a result of this, the website was made to be mobile-responsive  in addition to being desktop responsive by updating the grid system classes by adding the col-xs-* (phones) tier of class in addition to the col-md-* (desktop) class in the **index.html** file ensuring that the columns simply don't stack up in mobile devices. Hence, the DevTools was used for inspecting the responsiveness of our website by opening the **Toggle Device Toolbar** and testing the webpage by choosing a mobile device as shown in the figure below. As it can be seen in the image below the data is neatly displayed and viewed in a mobile device.
 
-![Mobile-responsive](Resources/Mobile_responsive.png)
+![Mobile-Responsive](Resources/Mobile_responsive.png)
 
 Additionally, four Bootstrap components were added to the **index.html** file for making the webpage stand out from other pages. Using the added components, the following elements were then further customized:
 
-- The **Scrape New Data**  button.
-- The **Mission to Mars** background.
+- The **Scrape New Data** button.
 - The **Facts Table**. 
 - The **Hemisphere Images** as thumbnails.
 - The background of the entire webpage.
@@ -52,7 +51,7 @@ Figure below shows the webpage before adding the boostrap components.
 
 The modified webpage after adding the bootsrap components is displayed in the figure below.
 
-![Webpage after adding Bootstrap components](Resources/Added_Bootstrap_components.png)
+![Webpage after adding Bootstrap components](Resources/Added_Bootstrap_Components.png)
 
 ## Summary 
 
